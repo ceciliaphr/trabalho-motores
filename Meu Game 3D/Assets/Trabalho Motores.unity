@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18171234, g: 0.2273737, b: 0.30742085, a: 1}
+  m_IndirectSpecularColor: {r: 0.18171223, g: 0.22737327, b: 0.30742034, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 1602941831}
   - component: {fileID: 1602941830}
   - component: {fileID: 1602941829}
+  - component: {fileID: 1602941833}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -476,13 +477,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602941828}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4064973, y: 0.00079733925, z: -0.00035474822, w: 0.9136516}
-  m_LocalPosition: {x: -0.25, y: 2.87, z: -10.44}
+  m_LocalRotation: {x: 0.057301067, y: 0.00087126094, z: -0.000050006296, w: 0.99835664}
+  m_LocalPosition: {x: 0.114, y: -1.986, z: -5.256}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 47.97, y: 0.1, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.57, y: 0.1, z: 0}
+--- !u!114 &1602941833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602941828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf34a6d7481698488148e970a1b7463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1741641877
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +598,7 @@ Transform:
   m_GameObject: {fileID: 1741641877}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.26, z: 0}
+  m_LocalPosition: {x: 0, y: -3.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -629,7 +643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7fef26ebf9f8e84a8b504918bdf0599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 10
+  velocidade: 20
+  forcaPulo: 7
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ GameObject:
   m_Layer: 0
   m_Name: Moeda1
   m_TagString: Moeda
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 3ea5f06ba06a87542b8004a8f9d98f06, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,4 +120,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c91fab2cbf46964ba73d8bc37f5f215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeGiro: 75
+  velocidadeGiro: 120

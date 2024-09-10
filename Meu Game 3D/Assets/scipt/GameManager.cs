@@ -4,10 +4,8 @@ using UnityEngine;
 using TMPro;
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI hub, msgVitoria;
+    public TextMeshProUGUI hud, msgVitoria;
     public int restantes;
-    
-    
     
     
     
@@ -15,8 +13,22 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         restantes = FindObjectsOfType<moeda>().Length;
+        
+        hud.text = $"Moedas restantes: {restantes}";
     }
 
+    public void SubtrairMoedas(int valor)
+    {
+        restantes -= valor;
+
+        if (restantes <= 0)
+        {
+            //ganhou o jogo
+            msgVitoria.text = "Parabéns!";
+        }
+    }
+    
+    
     // Update is called once per frame
     void Update()
     {

@@ -11,10 +11,11 @@ public class moeda : MonoBehaviour
         
     }
 
-    private void OntriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
+            FindObjectOfType<GameManager>().SubtrairMoedas(valor:1);
             Destroy(gameObject);
         }
     }
@@ -22,6 +23,6 @@ public class moeda : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(eulers: Vector3.up * velocidadeGiro * Time.deltaTime, relativeTo: Space.World);
+        transform.Rotate(eulers: Vector3.up * velocidadeGiro * Time.deltaTime, relativeTo:Space.World);
     }
 }

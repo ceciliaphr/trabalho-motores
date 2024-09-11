@@ -2,30 +2,18 @@ using System;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class Moeda1 : MonoBehaviour
+public class Coin : MonoBehaviour 
 {
+    // Valor da moeda
+    public int coinValue = 1;
 
-    public int velocidadeGiro = 50;
-    
-    void start()
+    // Método que é chamado quando o jogador colide com a moeda
+    void OnTriggerEnter(Collider other)
     {
-    
-    } 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-            {
-                Destroy(gameObject);
-            }   
+        if(other.CompareTag("Player")) // Verifica se o jogador colidiu com a moeda
+        {
+            // Destroi a moeda
+            Destroy (gameObject);
+        }
     }
-    
-    
-    
-    
-    
-    void update()
-    {
-        transform.Rotate(Vector3.up * velocidadeGiro * Time.deltaTime, Space.World);
-    }
-}   
-    
+}

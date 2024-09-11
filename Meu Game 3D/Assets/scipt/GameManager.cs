@@ -16,15 +16,16 @@ public class GameManager : MonoBehaviour
         
         hud.text = $"Moedas restantes: {restantes}";
     }
-
+    
     public void SubtrairMoedas(int valor)
     {
         restantes -= valor;
-
+        hud.text = $"Moedas restantes: {restantes}";
+        
         if (restantes <= 0)
         {
             //ganhou o jogo
-            msgVitoria.text = "Parabéns!";
+            msgVitoria.text = "Sua jornada levou você a um tesouro escondido!";
         }
     }
     

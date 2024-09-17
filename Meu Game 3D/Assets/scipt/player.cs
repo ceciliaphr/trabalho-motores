@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
@@ -7,13 +8,16 @@ public class Player : MonoBehaviour
     public int velocidade = 10;
     public int forcaPulo = 7;
     public bool noChão;
+    
     private Rigidbody rb;
 
+    private AudioSource source;
     // Start is called before the first frame update
     void Start()
     {
        Debug.Log(message:"START");
        TryGetComponent(out rb);
+       TryGetComponent(out source);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -37,6 +41,9 @@ public class Player : MonoBehaviour
 
              if (Input.GetKeyDown(KeyCode.Space) && noChão)
             {
+                //pulo
+                source.Play();
+                
                 rb.AddForce(Vector3.up * forcaPulo,ForceMode.Impulse);
                 noChão = false;
             }
